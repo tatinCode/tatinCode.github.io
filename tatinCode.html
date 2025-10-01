@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="robots" content="noai, noimageai" />
+        <meta name="keywords" content="project, projects, tatin, tatincode" />
+        <title>tatin</title>
+        <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@400;700&family=Fira+Code:wght@400;600&display=swap" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="/tatinCode.css">
+    </head>
+
+    <body>
+        <!-- Top nav -->
+        <header class="noprint">
+            <div class="navL"><a href="#about">About</a> · <a href="#projects">Projects</a></div>
+            <div class="navR"><a href="https://jtnr2.wordpress.com/" target="_blank">Blog</a> · <a href="#contact">Contact</a></div>
+            <div class="navC">Last updated <time id="lastUpdated"></time></div>
+        </header>
+
+        <h1 class="mast">Justine Tenorio <span class="muted">/ portfolio</span></h1>
+        <p class="tagline">Senior CS @ SFSU • Linux enjoyer • Low‑level + Embedded Systems <blink>▮</blink></p>
+
+        <hr />
+
+        <section id="about">
+            <h2>About</h2>
+            <p>
+            CS student looking to make his dev environment more enjoyable to use. 
+            I build fast, minimal, reliable software. Comfortable in C/C++, Java, Python, and some JS.
+            Tinkering on Linux (Arch and Pop_os), and a Raspberry Pi 4.
+            </p>
+            <p>
+            Interests:
+            <span class="pill">Low Level</span>
+            <span class="pill">Neovim</span>
+            <span class="pill">Tooling</span>
+            <span class="pill">Games</span>
+            <span class="pill">Microcontrollers</span>
+            </p>
+        </section>
+
+        <section id="projects">
+            <h2>Projects</h2>
+            <div class="grid grid-2">
+                <article class="card">
+                    <h3>linux-mini-shell</h3>
+                    <p class="muted">Linux • C</p>
+                    <p>
+                        A Simple linux shell I made for my Operating Systems class that
+                        I took and fixed because I didn't care much about it's functionality
+                        at the time. I added a way to change directory using 
+                        <b class="muted">
+                        _chdir()
+                        </b>
+                        and also fixed some problems when using multiple pipes.
+                    </p>
+                    <p>
+                    <a href="#" aria-label="Source code for Magic Mirror">source</a>
+                    </p>
+                </article>
+
+                <article class="card">
+                    <h3>Top‑Down Shooter</h3>
+                    <p class="muted">C++ • SDL2 • ECS</p>
+                    <p>Custom entity‑component system, deterministic physics, and sprite batching renderer.</p>
+                    <p>
+                    <a href="#">source</a> · <a href="#">notes</a>
+                    </p>
+                </article>
+
+                <article class="card">
+                    <h3>i3 + Polybar Rice</h3>
+                    <p class="muted">Shell • Linux</p>
+                    <p>My tiling‑window setup: keybinds, workspace rules, flameshot workflow, and status widgets.</p>
+                    <p><a href="#">repo</a> · <a href="#">screens</a></p>
+                </article>
+
+                <article class="card">
+                    <h3>Arduino Circuits Kit</h3>
+                    <p class="muted">C • Microcontroller</p>
+                    <p>Debounced inputs, PWM LED fades, and serial protocol to a host app for logging.</p>
+                    <p><a href="#">docs</a></p>
+                </article>
+            </div>
+        </section>
+
+        <section id="media">
+            <h2>Media</h2>
+            <figure class="video_floater">
+                <div class="video_frame">
+                    <iframe class="video_embed" src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="Project demo video" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <figcaption class="muted">Demo reel</figcaption>
+            </figure>
+
+            <img class="photo" src="https://picsum.photos/1200/600?random=1" alt="Project screenshot placeholder">
+            <figcaption class="muted">random picsum</figcaption>
+        </section>
+
+        <section id="environment">
+            <h2>Dots<h2>
+                    <p>
+
+        </section>
+
+        <section id="contact">
+            <h2>Contact</h2>
+            <p>
+            <a href="mailto:justinbusalpa22@gmail.com">you@example.com</a> ·
+            <a href="https://github.com/tatinCode">github</a> ·
+            <a href="https://www.linkedin.com/in/jtenorio22">linkedin</a>
+            </p>
+            <button id="themeBtn" class="noprint">Toggle theme</button>
+        </section>
+
+        <footer>
+            <hr />
+            <p>
+            Built with plain HTML/CSS, inspired by <a href="https://www.jwz.org/" rel="noreferrer noopener">jwz.org</a>.
+            <span class="muted">No frameworks were harmed.</span>
+            </p>
+        </footer>
+
+        <script>
+            // Last-updated = build time fallback to now
+            const d = new Date(document.lastModified || Date.now());
+            const fmt = new Intl.DateTimeFormat(undefined, { year: 'numeric', month: 'short', day: '2-digit' });
+            document.querySelector('#lastUpdated').textContent = fmt.format(d);
+
+            // Theme toggle — toggles .tatin for light theme
+            const btn = document.getElementById('themeBtn');
+            btn.addEventListener('click', () => document.body.classList.toggle('tatin'));
+        </script>
+    </body>
+</html>
+
