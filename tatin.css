@@ -1,9 +1,14 @@
-/*! Mostly copied/inspired from jwz.org - Jamie Zawinski */
+/*! Mostly copied/inspired from jwz.org - Jamie Zawinski
+ *
+ *  Built primarily using plaint HTML/CSS, no frameworks were harmed
+ *  during the rpcoess
+*/
 :root {
     --green: #0F0;
     --cyan:  #0DF;
     --gold:  #AD0;
     --orange:#F63;
+    --white: #FFF;
     --bg:    #000;
     --fg:    #EEE;
     --border:#080;
@@ -49,6 +54,10 @@ table, tbody, tr, td { border-color: var(--border); }
 .navL   { color: #666; font-weight: bold; float: left; }
 .navR   { color: #666; font-weight: bold; float: right; text-align:right; }
 .navC   { color: #666; font-weight: bold; text-align: center; }
+
+.line{
+    color: #FFF;
+}
 
 .photo  { width: 100%; height: auto; margin: 0.3em 0; border: 1px solid currentColor;
 display: block; box-sizing: border-box; }
