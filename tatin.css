@@ -37,7 +37,7 @@ hr { color: #000; background: #000; height: 1px; border: 0; }
 
 a:link    { text-decoration: none; color: var(--cyan); }
 a:hover   { text-decoration: none; color: #FFF !important; }
-a:visited { text-decoration: none; color: var(--gold); }
+a:visited { text-decoration: none; color: var(--cyan); }
 a:active  { text-decoration: none; color: var(--orange); }
 
 table, tbody, tr, td { border-color: var(--border); }
@@ -94,7 +94,7 @@ header:after { content: ""; display: table; clear: both; }
     gap: .75rem; 
 }
 
-/*
+/* thought n*2 grids would look nice? uncomment this
 .grid-2 { grid-template-columns: 1fr 1fr; }
  */
 
