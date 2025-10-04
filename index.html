@@ -1,9 +1,175 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
     <head>
-        <meta http-equiv="refresh" content="0; url=/home.html">
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="robots" content="noai, noimageai" />
+        <meta name="keywords" content="project, projects, tatin, tatincode, tatin osu" />
+
+        <title>tatin</title>
+        <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@400;700&family=Fira+Code:wght@400;600&display=swap" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="/tatin.css">
     </head>
 
     <body>
+        <h1 class="mast">Justine Tenorio <span class="muted">/ projects</span></h1>
+        <p class="tagline">Senior CompSci Student • Linux enjoyer • Low‑level • Embedded Systems<blink class="line">▮</blink></p>
+
+        <hr />
+
+        <section id="about">
+            <h2>About</h2>
+            <p>
+            CS student looking to make his dev environment more enjoyable to use. 
+            Here's some projects that I have, some of them are a Milestone for me
+            some of them for experimental.
+            </p>
+            <p> Interests:
+            <span class="pill">Low Level</span>
+            <span class="pill">Neovim</span>
+            <span class="pill">Games</span>
+            <span class="pill">Tooling</span>
+            <span class="pill">Rpi/Arduino</span>
+            </p>
+        </section>
+
+        <section id="projects">
+            <h2>Projects</h2>
+            <div class="grid grid-2">
+                <article class="card">
+                    <a href="https://github.com/tatinCode/linux-mini-shell" class="permalink"
+                        name="linux-mini-shell" target="_blank">
+                        <h3><code><b>linux-mini-shell</b></code></a>
+                    <span class="muted">(2025)</span></h3>
+                        <p>
+                        A Simple linux shell I made for my Operating Systems class using
+                        C that uses <b class="muted">fork()</b> and <b class="muted">execvp()</b> 
+                        to run those arguments. I then took the program and polished it, fixing 
+                        some problems it had when you use multiple pipes. After that I added a 
+                        way to change directories to make it somewhat usable using 
+                        <b class="muted">_chdir()</b>.
+                        </p>
+                </article>
+
+                <article class="card">
+                    <a href="https://github.com/tatinCode/file-tcpp" class="permalink"
+                        name="file-tcpp" target="_blank">
+                        <h3><code><b>file-tcpp</b></code></a>
+                    <span class="muted">(2025)</span></h3>
+                        <p>
+                        A file sending program I created using C++ that allows you to 
+                        send files through local IP. Could also be used to send files 
+                        publicly but I won't recommend it personally.
+                        </p>
+                </article>
+
+                <article class="card">
+                    <a href="https://github.com/tatinCode/Linked-List-Addition" class="permalink"
+                        name="Linked-List-Addition" target="_blank">
+                        <h3><code><b>Linked-List-Addition</b></code></a>
+                    <span class="muted">(2023)</span></h3>
+                        <p>
+                        An addition calculator I made using Java utilizing linked lists
+                        to make it possible to add big integers. It asks for a string input
+                        then puts it all in a linked list backwards and converting them to 
+                        integers. It then starts adding the two integers from
+                        the 2 linked lists from left to right. The program then checks 
+                        if the sum of the two integer from the current node is bigger
+                        than 9, if it is bigger than 9, then we take the modulo 10 of it.
+                        This is what gives a carry value to pass onto the sum of the next
+                        integers in the linked list. 
+                        </p>
+                </article>
+
+                <article class="card">
+                    <a href="https://github.com/tatinCode/task-manager" class="permalink"
+                        name="task-manager" target="_blank">
+                        <h3><code><b>task-manager</b></code></a>
+                    <span class="muted">(2025)</span></h3>
+                        <p>
+                        A CLI tool I made that is meant to manager tasks that you
+                        have. It has commands that lets you add, remove, and mark/
+                        unmark tasks. I have plans to make this into an actual tool
+                        for Linux but for now it's just simple CLI tool that needs
+                        the executable to run.
+                        </p>
+                </article>
+
+                <article class="card">
+                    <a href="https://github.com/tatinCode/Python-Banking-System" class="permalink"
+                        name="Python-Banking-System" target="_blank">
+                        <h3><code><b>Python-Banking-System</b></code></a>
+                    <span class="muted">(2023)</span></h3>
+                        <p>
+                        A CLI app that I made using Python and uses OOP to replicate
+                        functionality of a Banking system that you'd normally see
+                        That could handle multiple accounts through the use of account
+                        numbers. The program has a menu system that runs in an infinite 
+                        loop and lets you pick from the option by typing in a number.
+                        It lets you pick whether you'd want to deposit or withraw money
+                        as well as letting you check the balance of your account.
+                        </p>
+                </article>
+
+                <article class="card">
+                    <a href="https://github.com/tatinCode/Employee-Data" class="permalink"
+                        name="Employee-Data" target="_blank">
+                        <h3><code><b>Employee-Data</b></code></a>
+                    <span class="muted">(2023)</span></h3>
+                        <p>
+                        A menu driven program built on Python that uses OOP and 
+                        logs employee data into a <span class="muted"><b>.dat</b></span>
+                        file type to have persistency.This program have CRUD operations
+                        that lets you <span class="muted"><b>Add</b></span>, 
+                        <span class="muted"><b>Look up</b></span>, <span class="muted"><b>Change</b></span>
+                        , <span class="muted"><b>Delete</b></span>, and print out emplyee Data.
+                        </p>
+                </article>
+
+            </div>
+        </section>
+
+        <section id="media">
+            <h2>Media</h2>
+            <!---
+            <figure class="video_floater">
+                <div class="video_frame">
+                    <iframe class="video_embed" src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="Project demo video" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <figcaption class="muted">Demo reel</figcaption>
+            </figure>
+            --->
+
+            <img class="photo" src="https://picsum.photos/1200/600?random=1" alt="Project screenshot placeholder">
+            <figcaption class="muted">random picsum</figcaption>
+        </section>
+
+        <section id="environment">
+            <a href="https://github.com/tatinCode/dots" class="permalink"
+                name="Dots" target="_blank">
+                <code><h2>Dots<h2></code></a>
+        </section>
+
+        <!--- still thinking if I should add this
+        <section id="experience">
+            <h2>Experience/Feats</h2>
+
+                <article class="card">
+                    <h3>Operating Systems Class</h3>
+                </article>
+        </section>
+        --->
+
+        <section id="contact">
+            <h2>Contact</h2>
+            <p>
+            Check out my other works on <a href="https://github.com/tatinCode">github</a>
+            </p>
+
+            <button id="themeBtn" class="noprint">Toggle theme</button>
+        </section>
+
+        <script src="script.js"> </script>
     </body>
 </html>
+
