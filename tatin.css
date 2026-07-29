@@ -146,3 +146,143 @@ footer {
     hr { background: black !important; }
     .noprint, .navL, .navR, .navC { display: none !important; }
 }
+
+/*
+ * sky
+ */
+.sky{
+    position: relative;
+    min-height: 360px;
+    margin: 1rem 0;
+    overflow:hidden;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    background:
+        radial-gradient(circle at 20% 30%, rgba(0, 221, 255, 0.14), transparent 28%),
+        radial-gradient(circle at 80% 35%, rgba(173, 221, 0, 0.08), transparent 24%),
+        linear-gradient(180deg, #02030a 0%, #050915 55%, #000 100%);
+}
+
+.sky-star{
+    position: absolute;
+    left: var(--x);
+    top: var(--y);
+    width: var(--size);
+    height: var(--size);
+    border-radius: 50%;
+    background: #fff;
+    opacity: var(--opacity);
+    box-shadow: 0 0 8px rgba(255, 255, 255, 0.7);
+    animation: twinkle var(--duration) ease-in-out infinite alternate;
+    animation-delay: var(--delay);
+}
+
+@keyframes twinkle {
+    from {
+        opacity: calc(var(--opacity) / 2);
+        transform: scale(0.75);
+    }
+
+    to{
+        opacity: var(--opacity);
+        transform: scale(1.25);
+    }
+}
+
+.project-star{
+    position: absolute;
+    left: var(--x);
+    top: var(--y);
+    z-index: 2;
+    color: var(--fg);
+    text-decoration: none;
+    transform: translate(-50%, -50%);
+}
+
+.star-core{
+    display: block;
+    width: 12px;
+    height: 12px;
+    margin: 0 auto 0.35rem;
+    border-radius: 50%;
+    background: #fff;
+    box-shadow:
+        0 0 8px #fff,
+        0 0 18px var(--cyan),
+        0 0 28px var(--green);
+
+    animation: project-pulse 1.8s ease-in-out infinite alternate;
+}
+
+@keyframes project-pulse {
+    from {
+        transform: scale(0.9);
+    }
+    to {
+        transform: scale(1.25);
+    }
+}
+
+.project-label{
+    display: block;
+    font-family: "Fira Code", monospace;
+    font-size: 0.8rem;
+    color: var(--cyan);
+    text-align: center;
+    white-space: nowrap;
+}
+
+.writeup-card{
+    position: absolute;
+    left: 50%;
+    top: 1.8rem;
+    display: grid;
+    gap: 0.25rem;
+    width: 190px;
+    padding: 0.65rem;
+    border-radius: 6px;
+    background: rgba(0, 0, 0, 0.9);
+    color: var(--fg);
+    font-size: 0.85rem;
+    opacity: 0;
+    pointer-events: none;
+    transform: translateX(-50%) translateY(0.5rem);
+    transition: opacity 0.16s ease, transform 0.16s ease;
+}
+
+.project-star:hover .writeup-card,
+.project-star:focus .writeup-card,
+.project-star:focus-visible .writeup-card{
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+}
+
+@media screen and (max-width: 720px) {
+    .sky{
+        min-height: 520px;
+    }
+
+    .writeup-card{
+        position: static;
+        width: 170px;
+        margin-top: 0.35rem;
+        opacity: 1;
+        transform: none;
+    }
+
+    .project-star{
+        transform: translate(-50%, -50%);
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .sky-star,
+    .sky-core{
+        animation: none;
+    }
+}
+
+
+
+
+
