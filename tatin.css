@@ -51,7 +51,7 @@ table, tbody, tr, td { border-color: var(--border); }
 .tatin hr { color: #000; background: #000; height: 1px; border:0; }
 .tatin table, .jwzw tbody, .jwzw tr, .jwzw td { border-color: #000; }
 
-.navL   { color: #666; font-weight: bold; float: left; }
+.navL   { color: #666; font-weight: bold; text-align: left; margin-bottom: 1rem; }
 .navR   { color: #666; font-weight: bold; float: right; text-align:right; }
 .navC   { color: #666; font-weight: bold; text-align: center; }
 
